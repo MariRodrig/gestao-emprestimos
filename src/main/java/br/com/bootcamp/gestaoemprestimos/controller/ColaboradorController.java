@@ -6,6 +6,7 @@ import br.com.bootcamp.gestaoemprestimos.model.Colaborador;
 import br.com.bootcamp.gestaoemprestimos.model.Emprestimo;
 import br.com.bootcamp.gestaoemprestimos.service.ColaboradorService;
 import br.com.bootcamp.gestaoemprestimos.service.EmprestimoService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
+@Tag(name = "Colaboradores", description = "Cadastro e consulta de colaboradores")
 @RestController
 @RequestMapping("/colaboradores")
 public class ColaboradorController {

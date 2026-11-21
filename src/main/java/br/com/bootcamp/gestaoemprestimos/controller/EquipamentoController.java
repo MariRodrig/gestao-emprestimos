@@ -3,11 +3,13 @@ package br.com.bootcamp.gestaoemprestimos.controller;
 import br.com.bootcamp.gestaoemprestimos.model.Equipamento;
 import br.com.bootcamp.gestaoemprestimos.model.TipoEquipamento;
 import br.com.bootcamp.gestaoemprestimos.service.EquipamentoService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Equipamentos", description = "Cadastro e gerenciamento de equipamentos")
 @RestController
 @RequestMapping("/equipamentos")
 public class EquipamentoController {

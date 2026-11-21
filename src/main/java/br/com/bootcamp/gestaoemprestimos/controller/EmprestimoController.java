@@ -4,12 +4,14 @@ import br.com.bootcamp.gestaoemprestimos.dto.EmprestimoRequest;
 import br.com.bootcamp.gestaoemprestimos.dto.EmprestimoResponse;
 import br.com.bootcamp.gestaoemprestimos.model.Emprestimo;
 import br.com.bootcamp.gestaoemprestimos.service.EmprestimoService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Empréstimos", description = "Empréstimos e devoluções de equipamentos")
 @RestController
 @RequestMapping("/emprestimos")
 public class EmprestimoController {

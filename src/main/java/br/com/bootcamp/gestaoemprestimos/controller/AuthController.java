@@ -2,6 +2,7 @@ package br.com.bootcamp.gestaoemprestimos.controller;
 
 import br.com.bootcamp.gestaoemprestimos.dto.LoginRequest;
 import br.com.bootcamp.gestaoemprestimos.dto.LoginResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
-
+@Tag(name = "Autenticação", description = "Login e geração do token JWT")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {

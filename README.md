@@ -55,6 +55,16 @@ Com o **GitHub Actions**, os testes são executados automaticamente a cada push 
 
 A aplicação é executada localmente na porta `8081`.
 
+## Documentação da API
+
+A API utiliza Swagger para visualizar e testar os endpoints.
+
+Com a aplicação em execução, acesse:
+
+http://localhost:8081/swagger-ui/index.html
+
+Para testar os endpoints protegidos, é necessário fazer login e informar o token JWT no botão **Authorize**.
+
 ---
 
 Projeto desenvolvido para colocar em prática os conhecimentos adquiridos durante meus estudos em desenvolvimento backend Java.
