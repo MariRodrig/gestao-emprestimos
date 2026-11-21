@@ -1,70 +1,79 @@
 # Gestão de Empréstimos de Equipamentos
 
-API REST desenvolvida com Java e Spring Boot para gerenciar o empréstimo de equipamentos para colaboradores de uma empresa.
+API REST desenvolvida com Java e Spring Boot para gerenciar empréstimos de equipamentos para colaboradores de uma empresa.
 
-O projeto foi desenvolvido durante um bootcamp, com o objetivo de praticar desenvolvimento backend, banco de dados, testes automatizados e segurança de APIs.
+O projeto foi desenvolvido durante um bootcamp para praticar desenvolvimento backend, banco de dados, segurança e testes automatizados.
 
 ## Funcionalidades
 
 - Cadastro, consulta, atualização e exclusão de equipamentos.
 - Cadastro e consulta de colaboradores.
-- Registro e devolução de equipamentos emprestados.
-- Controle da disponibilidade dos equipamentos.
+- Registro de empréstimos e devoluções.
+- Controle de disponibilidade dos equipamentos.
 - Verificação de empréstimos atrasados.
-- Validações para evitar empréstimos indevidos.
-- Tratamento de erros com mensagens padronizadas.
-- Login com JWT e controle de acesso por perfis ADMIN e COLABORADOR.
+- Validações e tratamento de exceções.
+- Autenticação com JWT e controle de acesso por perfil.
 
 ## Tecnologias utilizadas
 
-- Java 17
-- Spring Boot
+- Java 17 e Spring Boot
 - Spring Data JPA / Hibernate
 - PostgreSQL
 - Spring Security e JWT
 - Maven
 - JUnit e MockMvc
+- Swagger / OpenAPI
+- Docker
 - Git e GitHub
 - GitHub Actions
+- Render
 
 ## Segurança
 
-A API utiliza Spring Security com JWT para autenticação.
+A API utiliza Spring Security e JWT para autenticação.
 
 Existem dois perfis de acesso:
 
-- **ADMIN:** pode gerenciar equipamentos e colaboradores, além de realizar empréstimos e devoluções.
-- **COLABORADOR:** pode consultar equipamentos, realizar empréstimos e devoluções.
+- **ADMIN:** pode gerenciar equipamentos, colaboradores e empréstimos.
+- **COLABORADOR:** pode consultar equipamentos e realizar empréstimos e devoluções.
 
 As senhas são protegidas com BCrypt.
 
 ## Testes automatizados
 
-O projeto possui testes unitários e de integração para verificar as funcionalidades e as regras de negócio.
+O projeto possui 22 testes automatizados para verificar funcionalidades, regras de negócio e segurança.
 
-Também foram criados testes de segurança para verificar acessos permitidos e bloqueados.
+Os testes também são executados pelo GitHub Actions a cada push na `main` e em Pull Requests direcionados a ela.
 
-Com o **GitHub Actions**, os testes são executados automaticamente a cada push na branch `main` e nos Pull Requests direcionados a ela.
+Para executar os testes localmente:
 
-## Como executar
+```bash
+./mvnw verify
+```
+
+No Windows, utilize `.\mvnw.cmd verify`.
+
+## Como executar localmente
 
 1. Ter Java 17 e PostgreSQL instalados.
-2. Criar os bancos de dados e configurar as variáveis de ambiente.
-3. Executar a aplicação Spring Boot.
-4. Utilizar o Postman para testar os endpoints.
+2. Criar o banco `gestao_emprestimos`.
+3. Configurar as variáveis de ambiente necessárias.
+4. Executar a aplicação Spring Boot.
 
-A aplicação é executada localmente na porta `8081`.
+A API será iniciada na porta `8081`.
 
-## Documentação da API
+## Deploy e documentação
 
-A API utiliza Swagger para visualizar e testar os endpoints.
+A API foi publicada no Render utilizando Docker e PostgreSQL na nuvem.
 
-Com a aplicação em execução, acesse:
+O Swagger permite visualizar e testar os endpoints diretamente pelo navegador.
 
-http://localhost:8081/swagger-ui/index.html
+**[Acessar Swagger da API](https://gestao-emprestimos-x3we.onrender.com/swagger-ui/index.html)**
 
 Para testar os endpoints protegidos, é necessário fazer login e informar o token JWT no botão **Authorize**.
 
+**Observação:** a aplicação utiliza serviços gratuitos do Render e pode demorar para responder ao primeiro acesso. O banco gratuito atual tem prazo de expiração.
+
 ---
 
-Projeto desenvolvido para colocar em prática os conhecimentos adquiridos durante meus estudos em desenvolvimento backend Java.
+Projeto desenvolvido para praticar os conhecimentos adquiridos durante meus estudos em desenvolvimento backend Java.
