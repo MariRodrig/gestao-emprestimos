@@ -74,6 +74,11 @@ Para testar os endpoints protegidos, é necessário fazer login e informar o tok
 
 **Observação:** a aplicação utiliza serviços gratuitos do Render e pode demorar para responder ao primeiro acesso. O banco gratuito atual tem prazo de expiração.
 
+## 🎥 Demonstração do projeto
+
+Gravei um vídeo apresentando a estrutura do backend, as principais regras de negócio, a documentação da API com Swagger e o funcionamento do sistema pela interface web.
+
+**️▶️ Assistir à demonstração do SysEmpréstimos](https://youtu.be/10e1KM5HM0I)**
 ---
 
 Projeto desenvolvido para praticar os conhecimentos adquiridos durante meus estudos em desenvolvimento backend Java.
